@@ -1,0 +1,101 @@
+/* Table Styles */
+table {
+    width: 100%; /* Make the table full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Add some space above the table */
+  }
+  
+  th.mat-header-cell {
+    /* rgba(63, 81, 181, 0.1); */
+    background-color: rgb(12, 19, 56); /* Light gray background for header */
+    font-weight: bold; /* Bold text for headers */
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding for better spacing */
+    color: #e0e0e0;
+  }
+  
+  td.mat-cell {
+    padding: 10px; /* Padding for cell content */
+    border-bottom: 1px solid #e0e0e0; /* Light gray bottom border for rows */
+  }
+  
+  tr.mat-row:hover {
+    background-color: rgba(144, 152, 206, 0.1); /* Light background on hover */
+  }
+  
+  mat-checkbox {
+    margin: 0; /* Remove default margin from checkbox */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    th.mat-header-cell,
+    td.mat-cell {
+      padding: 8px; /* Less padding on smaller screens */
+    }
+  
+    table {
+      font-size: 14px; /* Smaller font size on mobile */
+    }
+  }
+  
+
+ /* Kanban board css : start */
+/* Kanban board styles */
+.kanban-board {
+  display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  padding: 20px; /* Padding around the board */
+  background-color: #f9f9f9; /* Light background for the board */
+  border-radius: 8px; /* Rounded corners for the board */
+}
+
+/* Kanban Column Styles */
+.kanban-column {
+  background-color: #ffffff; /* White background for columns */
+  border: 1px solid #e0e0e0; /* Light border around columns */
+  border-radius: 8px; /* Rounded corners for columns */
+  width: 300px; /* Fixed width for each column */
+  margin-right: 20px; /* Space between columns */
+  padding: 10px; /* Padding inside columns */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  min-height: 400px; /* Ensure some height */
+}
+
+/* Column Header Styles */
+.kanban-column h3 {
+  background-color: #222b61; /* Dark indigo header */
+  color: white; /* White text for header */
+  padding: 10px; /* Padding for the header */
+  border-radius: 4px; /* Rounded corners for the header */
+  margin: 0; /* Remove margin */
+  text-align: center; /* Center the text */
+}
+
+/* Kanban Item Styles */
+.kanban-item {
+  background-color: #e3f2fd; /* Light indigo background for tasks */
+  margin: 10px 0; /* Space between tasks */
+  padding: 15px; /* Padding inside tasks */
+  border-radius: 4px; /* Rounded corners for tasks */
+  cursor: move; /* Change cursor to indicate dragging */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect for Kanban Items */
+.kanban-item:hover {
+  background-color: #bbdefb; /* Darker light indigo on hover */
+}
+
+/* Draggable Kanban Items */
+.kanban-item.cdk-drag-preview {
+  background: #bbdefb; /* Slightly darker on drag preview */
+  border: 1px dashed #222b61; /* Border for the dragging item */
+}
+
+.kanban-item.cdk-drag-placeholder {
+  background: #f0f0f0; /* Placeholder background */
+  border: 1px dashed #222b61; /* Border for placeholder */
+}
+
+/* Kanban board css : end */
